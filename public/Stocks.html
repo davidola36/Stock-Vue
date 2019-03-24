@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.4285;
+            color:#333;
+            background-color: #fff;
+            padding: 30px;
+            box-sizing: border-box;
+            }
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #e7e7e7;
+            margin-bottom: 30px;
+            }
+
+            li {
+            float: left;
+            }
+
+            li a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+            background-color: #111;
+            color: white;
+            }
+
+            .active {
+            background-color: #4CAF50;
+            }
+
+            h6{
+                font-size:14px;
+                font-weight:400;
+                margin-top:10px;
+                margin-bottom: 10px;
+            }
+
+            .parent {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            }
+            .parent > div {
+            display: inline-block;
+            flex-grow: 1;
+            flex-basis: calc(100% / 3);
+            padding-right: 10px;
+            padding-left: 10px;
+            box-sizing: border-box;
+            position: relative;
+            margin-bottom: 20px;
+            max-width: 325px;
+            }
+            
+            .panel-title {
+                font-size: 16px;
+                padding:10px 15px;
+                background-color: #dff0d8;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                border-color: #c2eca0;
+                color: #3c763d;
+
+            }
+            .panel-body {
+                padding:15px;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                border: 1px solid #d6e9c6;
+
+            }
+
+            .panel-input {
+                padding: 7px;
+                border-radius: 3px;
+                border: 1px solid #899c79;
+            }
+
+            /* .panel-body > input[t] */
+            .btn {
+                padding: 7px 10px;
+                float: right;
+                border-radius: 3px;
+                border: 1px solid transparent;
+                color: white;
+                background-color: #9fd8a1;
+
+            }
+        </style>
+    </head>
+<body>
+
+
+    <ul>
+        <li><a href="/Home" style="font-weight:bold">Stock Trader</a></li>
+        <li><a href="/Portfoli">Portfolio</a></li>
+        <li><a href="/Stocks">Stocks</a></li>
+        <li style="float:right"><a  href="#about">End Day</a></li>
+        <li style="float:right"><a class="active" href="#about">Save & Load</a></li>
+    </ul>
+
+    <div class="parent" style="display:flex">
+            <div>
+                <div class="panel-title">BMW</div>
+                <div class="panel-body">
+                    <input type="number" class="panel-input"/> 
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div>
+                <div class="panel-title">BMW</div>
+                <div class="panel-body">
+                    <input type="number" class="panel-input" /> 
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div>
+                <div class="panel-title">BMW</div>
+                <div class="panel-body">
+                    <input type="number" class="panel-input" /> 
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+            <div>
+                <div class="panel-title">BMW</div>
+                <div class="panel-body">
+                    <input type="number" /> 
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+        
+    </div>
+
+</body>
+</html>
