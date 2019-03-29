@@ -57,7 +57,7 @@ export default {
         .panel-title {
             font-size: 16px;
             padding:10px 15px;
-            background-color: #dff0d8;
+            background-color: #8ebed6;
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
             border-color: #c2eca0;

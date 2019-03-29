@@ -1,6 +1,7 @@
 <template>
     <div class="parent" style="display:flex">
-        <Stock v-for="stock in stocks" :stock="stock" :key="stock.id" />        
+        <h1 v-if="!portData" >Please buy some stock</h1>
+        <Stock v-for="stock in stocks" :stock="stock" :key="stock.id" />   
     </div>
 </template>
 
@@ -12,16 +13,31 @@ export default {
     components: {
         Stock
     },
+    data: function() {
+        return {
+            portData: false
+        }
+    },
     computed: {
         ...mapGetters({
             stocks: 'stockPortfolio'
         })
+    },
+    mounted(){
+         if(this.stocks.length > 0){
+            this.portData = true
+        }
+        
     }
+
 }
 </script>
 
 
 <style scoped>
+    .noDisplay{
+        display: none;
+    }
     .parent {
     flex-wrap: wrap;
     justify-content: space-between;
